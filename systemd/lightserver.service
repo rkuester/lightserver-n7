@@ -1,0 +1,5 @@
+[Unit]
+Description=Example server of light sensor values
+
+[Service]
+ExecStart=/usr/sbin/lightserver
