@@ -1,3 +1,11 @@
+lightserver-n7 (1.0.1) unstable; urgency=low
+
+  * Close sysfs file after each read (fixes bug)
+  * Return 0 values when the sensor is powered off
+  * Use abstract socket namespace
+
+ -- Ryan Kuester <rkuester@insymbols.com>  Fri, 19 Apr 2013 14:42:21 -0500
+
 lightserver-n7 (1.0) unstable; urgency=low
 
   * Initial release
