@@ -120,7 +120,12 @@ static int read_lux(char *s, int capacity)
 
 	rc = read(fd, s, capacity - 1);
 	if (rc == -1) {
-		perror("sysfs read()");
+		if (errno == EBUSY) {
+			// device in suspend
+			sprintf(s, "0\n");
+			rc = 0;
+		} else
+			perror("sysfs read()");
 	}
 
 	close(fd);
