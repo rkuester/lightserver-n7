@@ -1,5 +1,5 @@
 [Socket]
-ListenStream=/run/lightserver.socket
+ListenStream=@/run/lightserver.socket
 
 [Install]
 WantedBy=sockets.target
