@@ -1,0 +1,15 @@
+Source: lightserver-n7
+Section: embedded
+Priority: extra
+Maintainer: Ryan Kuester <rkuester@insymbols.com>
+Build-Depends: libsystemd-daemon-dev, debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Vcs-Git: http://git.pragmatux.org/lightserver-n7.git
+Vcs-Browser: http://git.pragmatux.org/lightserver-n7.git
+
+Package: lightserver-n7
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Serves light sensor values on Nexus 7
+ This TCP server which writes the Nexus 7's light sensor values a
+ client at a steady rate.
