@@ -121,10 +121,10 @@ static int read_lux(char *s, int capacity)
 	rc = read(fd, s, capacity - 1);
 	if (rc == -1) {
 		perror("sysfs read()");
-		return -1;
 	}
 
-	return 0;
+	close(fd);
+	return rc == -1 ? -1 : 0;
 }
 
 static int serve(int fd)
