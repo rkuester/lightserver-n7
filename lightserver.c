@@ -108,7 +108,7 @@ static int timer_wait(int timer)
 
 static int read_lux(char *s, int capacity)
 {
-	const char *SYSFS_ATTRIBUTE = "/sys/bus/i2c/drivers/al3010/2-001c/show_revise_lux";
+	const char *SYSFS_ATTRIBUTE = "/dev/sine";
 	int fd;
 	int rc;
 	
