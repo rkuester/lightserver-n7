@@ -1,5 +1,6 @@
 CFLAGS += $(shell pkg-config --cflags libsystemd-daemon)
-LDFLAGS += $(shell pkg-config --cflags --libs libsystemd-daemon)
+LDFLAGS += $(shell pkg-config --cflags --libs libsystemd-daemon) \
+	-ldl -lrt -lpthread
 
 lightserver: lightserver.o
 
